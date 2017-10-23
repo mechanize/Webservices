@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Webservices</string>
+    <string name="title">rubfisch</string>
+    <string name="r1">Temperature from RawHttp: </string>
+    <string name="r2">Temperature from TextSensor: </string>
+    <string name="r3">Temperature from JsonSensor: </string>
+    <string name="s1">Temperature from XmlSensor: </string>
+    <string name="s2">Temperature from SoapSensor: </string>
+    <string name="title_activity_restserver">RESTserver</string>
+    <string name="startB">START</string>
+    <string name="stopB">STOP</string>
+</resources>
