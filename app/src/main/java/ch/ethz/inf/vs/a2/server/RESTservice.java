@@ -17,7 +17,11 @@ public class RESTservice extends Service {
     public RESTservice() {
         try {
             serverSocket = new ServerSocket(PORT);
-        } catch (IOException e) {
+            while(true) {
+                acceptRequest();
+            }
+
+            } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -28,9 +32,28 @@ public class RESTservice extends Service {
 
         String inputLine;
         while((inputLine = in.readLine()) != null) {
-
-
+            parseArgs(inputLine);
         }
+        String response = generateReponse("", "", 0, "");
+        out.write(response);
+    }
+    
+    private String parseArgs(String inputLine) {
+        String[] s = inputLine.split(" ");
+        if (s[0] == "GET" && s[2] == "HTTP/1.1") {
+            String path = s[1];            
+        }
+            
+        return null;
+    }
+    
+    private String generateReponse(String path, String host, int port, String connection) {
+        String end = "\r\n";
+        String response = "GET " + path + " HTTP/1.1" + end;
+        response = response + "Host: " + host + ":" + Integer.toString(port) + end;
+        response = response + "Accept: text/html" + end;
+        response = response + "Connection: " + connection + " " + end + end;
+        return response;
     }
 
     public int getPORT() {
