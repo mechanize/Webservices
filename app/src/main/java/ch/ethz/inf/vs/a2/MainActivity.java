@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.button3:
-                //intent = new Intent(this, .class);
-                //startActivity(intent);
+                intent = new Intent(this, RESTserver.class);
+                startActivity(intent);
                 break;
 
         }

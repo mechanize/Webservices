@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="24pt"
         android:orientation="horizontal">
 
         <Button
@@ -29,5 +29,18 @@
             android:text="@string/stopB"
             tools:layout_editor_absoluteX="224dp"
             tools:layout_editor_absoluteY="81dp" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/Port"
+        android:layout_width="match_parent"
+        android:layout_height="18pt"
+        android:text="asdadsadasd" />
+
+    <TextView
+        android:id="@+id/IP"
+        android:layout_width="match_parent"
+        android:layout_height="88pt"
+        android:text="TextView" />
 </LinearLayout>
